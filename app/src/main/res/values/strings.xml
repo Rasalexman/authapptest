@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AuthAppTest</string>
+    <string name="button_enter">Войти</string>
+    <string name="button_create">Создать</string>
+    <string name="text_auth">Авторизация</string>
+    <string name="text_email">Электронная почта</string>
+    <string name="text_password">Пароль</string>
+    <string name="text_hint">Введите значение</string>
+</resources>
