@@ -121,6 +121,7 @@ public class AuthController extends BaseActionBarController {
     private void showSnackBack(String info){
         Snackbar snack = Snackbar.make(this.getView(), info, Snackbar.LENGTH_LONG);
         View view = snack.getView();
+        view.setPadding(4,0,4,0);
         TextView tv = (TextView) view.findViewById(android.support.design.R.id.snackbar_text);
         tv.setTextColor(Color.WHITE);
         snack.show();
