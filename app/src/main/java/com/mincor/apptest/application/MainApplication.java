@@ -18,6 +18,8 @@ package com.mincor.apptest.application;
 
 import android.app.Application;
 
+import com.mincor.apptest.di.component.AppComponent;
+import com.mincor.apptest.di.component.DaggerAppComponent;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 
@@ -28,22 +30,14 @@ import com.squareup.leakcanary.RefWatcher;
 public class MainApplication extends Application {
 
     public static RefWatcher refWatcher;
-
-
-    //// MAIN CONTEXT INSTANCE
-    private static MainApplication ourInstance;
-    public static MainApplication getInstance() { return ourInstance;  }
-
-    public MainApplication(){   }
-
+    private static AppComponent appComponent;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        if (ourInstance == null) ourInstance = this;
 
         ///---------- DAGGER INITIALIZE
-//        appComponent = DaggerAppComponent.builder().build();
+        appComponent = DaggerAppComponent.builder().build();
 
         ////----- LEAK CANARY INITIALIZATION
         if (LeakCanary.isInAnalyzerProcess(this)) {
@@ -54,7 +48,7 @@ public class MainApplication extends Application {
         refWatcher = LeakCanary.install(this);
     }
 
-//    public static AppComponent getAppComponent() {
-//        return appComponent;
-//    }
+    public static AppComponent getAppComponent() {
+        return appComponent;
+    }
 }

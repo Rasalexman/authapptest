@@ -27,6 +27,7 @@ public abstract class BaseActionBarController extends BaseController {
         setTitle();
         setActionBar();
         this.setHasOptionsMenu(true);
+        setHomeButtonEnable();
     }
 
     protected void setHomeButtonEnable() {

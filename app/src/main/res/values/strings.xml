@@ -5,5 +5,9 @@
     <string name="text_auth">Авторизация</string>
     <string name="text_email">Электронная почта</string>
     <string name="text_password">Пароль</string>
-    <string name="text_hint">Введите значение</string>
+    <string name="error_login">Не верный логин</string>
+    <string name="error_pass">Не верный пароль</string>
+    <string name="error_pass_length">Пароль - минимум 6 символов, должен обязательно содержать минимум 1 строчную букву, 1 заглавную, и 1 цифру</string>
+    <string name="error_get_data">Произошла ошибка при получении данных! Попробуйте позже.</string>
+    <string name="text_weather_result">Погода в %city%: %desc%, температрура воздуха - %grad%°, ветер - %wind% м/с, давление - %pres% ртс, влажность - %hum%%</string>
 </resources>
